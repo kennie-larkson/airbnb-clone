@@ -1,7 +1,11 @@
 import Image from "next/image";
 import * as Icons from "heroicons-react";
+import { useState } from "react";
 
 export default function Header(): JSX.Element {
+  const [searchInput, setSearchInput] = useState("");
+  console.log(searchInput);
+
   return (
     <header className="sticky top-0 z-50 bg-white grid grid-cols-3 shadow-md p-5 md:px-10 ">
       {/* Left- Logo*/}
@@ -23,6 +27,8 @@ export default function Header(): JSX.Element {
           name=""
           id=""
           placeholder="Start your Search"
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
         />
         <Icons.Search
           size={32}
