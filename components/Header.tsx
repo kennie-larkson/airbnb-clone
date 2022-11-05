@@ -88,10 +88,7 @@ export default function Header(): JSX.Element {
               min={1}
             />
           </div>
-          {/* <div className="grid grid-cols-2 mx-auto gap-x-60 mt-5 ">
-            <h2 className="text-gray-400 cursor-pointer">Cancel</h2>
-            <h2 className=" text-red-400 cursor-pointer">Search</h2>
-          </div> */}
+
           <div className="flex">
             <button
               onClick={() => setSearchInput("")}
