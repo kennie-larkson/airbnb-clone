@@ -7,6 +7,8 @@ import SmallCard from "../components/SmallCard";
 import MediumCard from "../components/MediumCard";
 import LargeCard from "../components/LargeCard";
 import Footer from "../components/Footer";
+import Link from "next/link";
+import * as Icons from "heroicons-react";
 
 interface Data {
   img: string;
@@ -30,7 +32,7 @@ export default function Home({ data, cardJson }: ServerProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header placeholder={""} />
       <Banner />
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
