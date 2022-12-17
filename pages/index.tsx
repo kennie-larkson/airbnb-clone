@@ -74,11 +74,17 @@ export default function Home({ data, cardJson }: ServerProps) {
 
 export async function getStaticProps() {
   try {
-    const res = await fetch("http://localhost:7777/api/travels");
+    const res = await fetch(
+      //"http://localhost:7777/api/travels"
+      "https://weblog-kdc6.onrender.com/airbnb/listings"
+    );
 
     const data = await res.json();
 
-    const cardsData = await fetch("http://localhost:7777/api/cards-data");
+    const cardsData = await fetch(
+      //"http://localhost:7777/api/cards-data"
+      "https://weblog-kdc6.onrender.com/airbnb/travel/details"
+    );
     const cardJson = await cardsData.json();
 
     return {

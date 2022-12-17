@@ -72,7 +72,8 @@ export default Search;
 export async function getServerSideProps() {
   try {
     const searchResults = await fetch(
-      "http://localhost:7777/api/travels/details"
+      //"http://localhost:7777/api/travels/details"
+      "https://weblog-kdc6.onrender.com/airbnb/travel/details"
     ).then((res) => res.json());
 
     return {
